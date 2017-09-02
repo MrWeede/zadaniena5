@@ -313,6 +313,12 @@
 	.\-1u {
 		margin-left: 8.33333%;
 	}
+	.form-column {
+		    width: 230px;
+			float: left;
+			margin-right: 11px;
+	}
+	.form-column.last { margin-right: 0px;}
 
 	@media screen and (max-width: 1680px) {
 
@@ -1696,7 +1702,6 @@
 		-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px rgba(255, 255, 255, 0.35);
 		color: #ffffff;
 		text-decoration: none;
 	}
@@ -2590,7 +2595,7 @@
 		font-family: Raleway, Helvetica, sans-serif;
 		font-size: 0.8em;
 		font-weight: 700;
-		height: 3.75em;
+		height: 47.66px;
 		letter-spacing: 0.1em;
 		line-height: 3.75em;
 		padding: 0 2.25em;
@@ -3098,7 +3103,7 @@
 /* Banner */
 
 	#banner {
-		padding: 10em 0 4.75em 0 ;
+		padding: 4em 0 1em 0;
 	}
 
 		#banner .inner {
@@ -3116,9 +3121,12 @@
 			-ms-transform: translateY(0);
 			transform: translateY(0);
 			opacity: 1;
-			margin: 0 0 1.3em 0;
+			margin: 0;
+			float: left;
 		}
-
+		#banner .logo img{
+			    width: 83px;
+		}
 			#banner .logo .icon {
 				border-radius: 100%;
 				border: solid 2px rgba(255, 255, 255, 0.125);
@@ -3151,8 +3159,8 @@
 			opacity: 1;
 			border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 			font-size: 2.25em;
-			margin-bottom: 0.8em;
-			padding-bottom: 0.4em;
+			margin-bottom: 0;
+			padding-top: 16px;
 		}
 
 		#banner p {
@@ -3265,7 +3273,15 @@
 		}
 
 /* Wrapper */
-
+	#wrapper {
+		padding: 0;
+		height: 266px;
+		margin-top: 35px;
+	}
+	#wrapper .inner{
+		    margin: 0 auto;
+			width: 55em;
+	}
 	#wrapper > header {
 		padding: 11em 0 2.25em 0 ;
 	}
@@ -3289,6 +3305,12 @@
 			letter-spacing: 0.1em;
 			line-height: 2;
 			text-transform: uppercase;
+		}
+		.search-form-container {
+			height: 47.66px;
+		}
+		.search-form-results {
+			padding: 20px 0;
 		}
 
 	@media screen and (max-width: 1280px) {
@@ -3721,7 +3743,7 @@
 /* Footer */
 
 	#footer .inner {
-		padding: 5em 0 3em 0 ;
+		padding: 0;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;

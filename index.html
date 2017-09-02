@@ -11,6 +11,7 @@
 <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="jquery.chained.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
+  <script src="https://viralseedmedia.com/_player/play.js#3Db2qza9BI" async callback=""></script>
   <script type="text/javascript" charset="utf-8">
   $(function() {
 
@@ -18,21 +19,37 @@
     $("#przedmiot").chained("#klasa");
     $("#ksiazka").chained("#przedmiot");
     $("#temat").chained("#ksiazka");
+	
+    $("#button").chained("#temat");
 
     /* Show button after each pulldown has a value. */
-    $("#temat").bind("change", function(event) {
+   /* $("#temat").bind("change", function(event) {
         if ("" != $("option:selected", this).val() && "" != $("option:selected", $("#ksiazka")).val()) {
             $("#button").fadeIn();
         } else {
             $("#button").hide();
         }
-    });
-
-   
+    });*/
+	
+	$(document).ready(function(){
+    $("select").change(function(){
+        $(this).find("option:selected").each(function(){
+            var optionValue = $(this).attr("value");
+            if(optionValue){
+                $(".box").not("." + optionValue).hide();
+                $("." + optionValue).show();
+            } else{
+                $(".box").hide();
+            }
+        });
+    }).change();
+});
 
   });
   </script>
+      <script type="text/javascript">
 
+</script>
 </head>
 <body>
 
@@ -40,13 +57,13 @@
 <div id="page-wrapper"> 
   
   <!-- Header -->
-  <header id="header" class="alt">
+  <!-- <header id="header" class="alt">
     <h1><a href="index.html">Zadaniena5.pl</a></h1>
-    <nav> <a href="#menu">Menu</a> </nav>
-  </header>
+  <nav> <a href="#menu">Menu</a> </nav> 
+  </header> -->
   
   <!-- Menu -->
-  <nav id="menu">
+  <!--<nav id="menu">
     <div class="inner">
       <h2>Menu</h2>
       <ul class="links">
@@ -57,16 +74,26 @@
         <li><a href="#">Sign Up</a></li>
       </ul>
       <a href="#" class="close">Close</a> </div>
-  </nav>
+  </nav>-->
   
   <!-- Banner -->
   <section id="banner">
     <div class="inner">
-      <div class="logo"><span class="icon fa-diamond"></span></div>
+      <div class="logo"><a href="index.html"><img src="images/owlthumbtransp_2.png"></a></div>
       <h2>Znajdź swoje zadanie domowe!</h2>
-      <div class="search-form-container">
+      
+      <!--  
+      <div class="item type1 date1" > type 1 </div>
+      <div class="item type2 date2 color1" > type 2 </div>
+      <div class="item type1 date2" > type 1 </div>--> 
+    </div>
+  </section>
+  <!-- Wrapper --> 
+  <section id="wrapper">
+  	<div class="inner">
+  <div class="search-form-container">
       <form>
-      <div class="form-column first">
+      <div class="form-column">
       <select id="klasa" name="klasa">
           <option value="">Wybierz Klasę</option>
           <option value="3szk.pod">3 szkoły podstawowej</option>
@@ -96,38 +123,37 @@
           <option value="moje.cwiczenia.1" data-chained="edu.wczesnoszkolna">Moje ćwiczenia 1 (Zeszyt ćwiczeń)</option>
           <option value="moje.cwiczenia.2" data-chained="edu.wczesnoszkolna">Moje ćwiczenia 2 (Zeszyt ćwiczeń)</option>
           
-
-          <option value="sedan" data-chained="a1 a3 s3 a4 s4 a6 s6 rs6">Sedan</option>
-          <option value="sportback" data-chained="a3 s3 a5 s5">Sportback</option>
-          <option value="cabriolet" data-chained="a3 a5 s5">Cabriolet</option>
-          <option value="avant" data-chained="a4 s4 a6 s6 rs6">Avant</option>
-          <option value="allroad" data-chained="a4 a6">Allroad</option>
-          <option value="coupe" data-chained="a5 s5">Coupe</option>
         </select>
       </div>
-      <div class="form-column">
+      <div class="form-column last">
       <select id="temat" name="temat">
           <option value="">Wybierz Teamt</option>
-          <option value="25-petrol" data-chained="junior.explorer.3">Wpisz brakujące litery str. 10</option>
-          <option value="30-petrol" data-chained="moje.cwiczenia.1">3.0 petrol</option>
-          <option value="30-diesel" data-chained="series-3+sedan series-5+sedan a5">3.0 diesel</option>
+          <option value="red" data-chained="junior.explorer.3">Wpisz brakujące litery str. 10</option>
+          <option value="30-petrol" data-chained="moje.cwiczenia.1">Znajdź słowa</option>
+          <option value="30-petrol" data-chained="moje.cwiczenia.2">Dopasuj imiona</option>
         </select>
       </div>
-      <button id="button" type="submit" style="display: none;">Otwórz</button>
        </form>
       </div>
-      <div class="item type1 date1" > type 1 </div>
-      <div class="item type2 date2 color1" > type 2 </div>
-      <div class="item type1 date2" > type 1 </div>
-    </div>
+      </div>
+      
+      <div class="inner">
+       <div class="search-form-results">
+      <div class="red box">
+      <script src="https://viralseedmedia.com/_player/play.js#ihG3k1YxxK" async="true" callback=""></script>
+      	<p>Wpisz brakujące litery str. 10</p>
+      </div>
+      <div class="green box">You have selected <strong>green option</strong> so i am here</div>
+      <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
+      </div>
+	  </div>
+   	  
   </section>
-  <!-- Wrapper --> 
-  
   <!-- Footer -->
   <section id="footer">
     <div class="inner">
       <ul class="copyright">
-        <li>&copy; Untitled Inc. All rights reserved.</li>
+        <li>© 2017 All Rights Reserved. Developed by <a target="_blank" href="https://pl.linkedin.com/in/bartłomiej-dorynek-ba45b856">Bartłomiej Dorynek</a></li>
         <li></li>
       </ul>
     </div>
