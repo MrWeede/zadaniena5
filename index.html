@@ -1,17 +1,19 @@
 <!DOCTYPE HTML>
 
 <html>
-<head>
-<title>Zadaniena5.pl</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-<link rel="stylesheet" href="assets/css/main.css" />
-<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+  <head>
+  <title>Zadaniena5.pl</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" sizes="32x32" href=".\images\favicon\favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href=".\images\favicon\favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href=".\images\favicon\favicon-16x16.png">
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+  <script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
   <script src="jquery.chained.js?v=1.0.0" type="text/javascript" charset="utf-8"></script>
-  <script src="https://viralseedmedia.com/_player/play.js#3Db2qza9BI" async callback=""></script>
   <script type="text/javascript" charset="utf-8">
   $(function() {
 
@@ -46,24 +48,30 @@
 });
 
   });
+  
+  $(function(){
+    var includes = $('[data-include]');
+    jQuery.each(includes, function(){
+      var file = 'views/' + $(this).data('include') + '.html';
+      $(this).load(file);
+    });
+  });
+  
   </script>
-      <script type="text/javascript">
-
-</script>
-</head>
-<body>
+  </head>
+  <body>
 
 <!-- Page Wrapper -->
 <div id="page-wrapper"> 
-  
-  <!-- Header -->
-  <!-- <header id="header" class="alt">
+    
+    <!-- Header --> 
+    <!-- <header id="header" class="alt">
     <h1><a href="index.html">Zadaniena5.pl</a></h1>
   <nav> <a href="#menu">Menu</a> </nav> 
-  </header> -->
-  
-  <!-- Menu -->
-  <!--<nav id="menu">
+  </header> --> 
+    
+    <!-- Menu --> 
+    <!--<nav id="menu">
     <div class="inner">
       <h2>Menu</h2>
       <ul class="links">
@@ -74,90 +82,91 @@
         <li><a href="#">Sign Up</a></li>
       </ul>
       <a href="#" class="close">Close</a> </div>
-  </nav>-->
-  
-  <!-- Banner -->
-  <section id="banner">
-    <div class="inner">
-      <div class="logo"><a href="index.html"><img src="images/owlthumbtransp_2.png"></a></div>
-      <h2>Znajdź swoje zadanie domowe!</h2>
-      
-      <!--  
+  </nav>--> 
+    
+    <!-- Banner -->
+    <section id="banner">
+    <div class="inner"> <a style="display:block;" href="index.html">
+      <div class="logo"><img src="images/owlthumbtransp_2.png"></div>
+      <h2>ZadanieNa5.pl<br>
+        <span class="small_title">Znajdź swoje zadanie domowe!</span></h2>
+      </a> 
+        <!--  
       <div class="item type1 date1" > type 1 </div>
       <div class="item type2 date2 color1" > type 2 </div>
       <div class="item type1 date2" > type 1 </div>--> 
-    </div>
+      </div>
   </section>
-  <!-- Wrapper --> 
-  <section id="wrapper">
-  	<div class="inner">
-  <div class="search-form-container">
-      <form>
-      <div class="form-column">
-      <select id="klasa" name="klasa">
-          <option value="">Wybierz Klasę</option>
-          <option value="3szk.pod">3 szkoły podstawowej</option>
-          <option value="4szk.pod">4 szkoły podstawowej</option>
-        </select>
-      </div>
-      <div class="form-column">
-      <select id="przedmiot" name="przedmiot">
-          <option value="">Wybierz Przedmiot</option>
-
-          <option value="j.angielski" data-chained="3szk.pod">język angielski </option>
-          <option value="edu.wczesnoszkolna" data-chained="3szk.pod">Edukacja wczesnoszkolna</option>
-
-          <option value="matematyka" data-chained="4szk.pod">Matematyka</option>
-          <option value="j.polski" data-chained="4szk.pod">Język polski</option>
-          <option value="j.angielski" data-chained="4szk.pod">Język angielski</option>
-          <option value="j.niemiecki" data-chained="4szk.pod">Język niemiecki</option>
-          <option value="przyroda" data-chained="4szk.pod">Przyroda</option>
-          <option value="historia" data-chained="4szk.pod">Historia</option>
-        </select>
-      </div>
-      <div class="form-column">
-      <select id="ksiazka" name="ksiazka">
-          <option value="">Wybierz Książkę</option>
-
-          <option value="junior.explorer.3" data-chained="j.angielski">Junior Explorer 3(Zeszyt ćwiczeń)</option>
-          <option value="moje.cwiczenia.1" data-chained="edu.wczesnoszkolna">Moje ćwiczenia 1 (Zeszyt ćwiczeń)</option>
-          <option value="moje.cwiczenia.2" data-chained="edu.wczesnoszkolna">Moje ćwiczenia 2 (Zeszyt ćwiczeń)</option>
-          
-        </select>
-      </div>
-      <div class="form-column last">
-      <select id="temat" name="temat">
-          <option value="">Wybierz Teamt</option>
-          <option value="red" data-chained="junior.explorer.3">Wpisz brakujące litery str. 10</option>
-          <option value="30-petrol" data-chained="moje.cwiczenia.1">Znajdź słowa</option>
-          <option value="30-petrol" data-chained="moje.cwiczenia.2">Dopasuj imiona</option>
-        </select>
-      </div>
-       </form>
-      </div>
-      </div>
-      
-      <div class="inner">
-       <div class="search-form-results">
-      <div class="red box">
-      <script src="https://viralseedmedia.com/_player/play.js#ihG3k1YxxK" async="true" callback=""></script>
-      	<p>Wpisz brakujące litery str. 10</p>
-      </div>
-      <div class="green box">You have selected <strong>green option</strong> so i am here</div>
-      <div class="blue box">You have selected <strong>blue option</strong> so i am here</div>
-      </div>
-	  </div>
-   	  
-  </section>
-  <!-- Footer -->
-  <section id="footer">
+    <!-- Wrapper -->
+    <section id="wrapper">
     <div class="inner">
-      <ul class="copyright">
+        <div class="search-form-container">
+        <form>
+            <div class="form-column">
+            <select id="klasa" name="klasa">
+                <option value="">Wybierz Klasę</option>
+                <option value="3szk.pod">3 szkoły podstawowej</option>
+                <option value="4szk.pod">4 szkoły podstawowej</option>
+              </select>
+          </div>
+            <div class="form-column">
+            <select id="przedmiot" name="przedmiot">
+                <option value="">Wybierz Przedmiot</option>
+                <option value="3szk.pod.j.angielski" data-chained="3szk.pod">język angielski </option>
+                <option value="3szk.pod.edu.wczesnoszkolna" data-chained="3szk.pod">Edukacja wczesnoszkolna</option>
+                <option value="4szk.pod.matematyka" data-chained="4szk.pod">Matematyka</option>
+                <option value="4szk.pod.j.polski" data-chained="4szk.pod">Język polski</option>
+                <option value="4szk.pod.j.angielski" data-chained="4szk.pod">Język angielski</option>
+                <option value="4szk.pod.j.niemiecki" data-chained="4szk.pod">Język niemiecki</option>
+                <option value="4szk.pod.przyroda" data-chained="4szk.pod">Przyroda</option>
+                <option value="4szk.pod.historia" data-chained="4szk.pod">Historia</option>
+              </select>
+          </div>
+            <div class="form-column">
+            <select id="ksiazka" name="ksiazka">
+                <option value="">Wybierz Książkę</option>
+                <option value="junior.explorer.3" data-chained="3szk.pod.j.angielski">Junior Explorer 3(Zeszyt ćwiczeń)</option>
+                <option value="moje.cwiczenia.1" data-chained="3szk.pod.edu.wczesnoszkolna">Moje ćwiczenia 1 (Zeszyt ćwiczeń)</option>
+                <option value="moje.cwiczenia.2" data-chained="3szk.pod.edu.wczesnoszkolna">Moje ćwiczenia 2 (Zeszyt ćwiczeń)</option>
+              </select>
+          </div>
+            <div class="form-column last">
+            <select id="temat" name="temat">
+                <option value="">Wybierz Teamt</option>
+                <option value="red" data-chained="junior.explorer.3">Wpisz brakujące litery str. 10</option>
+                <option value="green" data-chained="moje.cwiczenia.1">Znajdź słowa</option>
+                <option value="30-petrol" data-chained="moje.cwiczenia.2">Dopasuj imiona</option>
+              </select>
+          </div>
+          </form>
+      </div>
+      </div>
+    <div class="inner2">
+        <div class="search-form-results">
+        <div class="red box"> 
+        
+      			<div data-include="test"></div>
+            
+          </div>
+        <div class="green box">
+        		<div data-include="test2"></div>
+           
+          </div>
+        <div class="blue box">
+            
+          </div>
+      </div>
+      </div>
+  </section>
+    <!-- Footer -->
+    <section id="footer">
+    <div class="inner">
+        <ul class="copyright">
         <li>© 2017 All Rights Reserved. Developed by <a target="_blank" href="https://pl.linkedin.com/in/bartłomiej-dorynek-ba45b856">Bartłomiej Dorynek</a></li>
         <li></li>
       </ul>
-    </div>
+      </div>
   </section>
-</div>
+  </div>
 </body>
 </html>
