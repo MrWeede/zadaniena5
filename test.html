@@ -1,0 +1,57 @@
+<!--
+<script src="https://viralseedmedia.com/_player/play.js#3NAN8xtPuO" async="true" callback=""></script>
+<script src="https://viralseedmedia.com/_player/play.js#uRnONAYMuz" async callback=""></script>
+<script src="https://viralseedmedia.com/_player/play.js#YlJ3RgS0At" async="true" callback=""></script>
+-->
+
+ 
+        
+        <div class="download_materials">
+           	<ul class="actions">
+               <li><a href="#" class="button icon fa-download">Pobierz rozwiązania</a></li>
+            </ul>
+        </div>
+            <script type="text/javascript"> 
+   // Load the IFrame Player API code asynchronously 
+   var tag = document.createElement('script'); 
+   tag.src = "http://www.youtube.com/player_api"; 
+   var firstScriptTag = document.getElementsByTagName('script')[0]; 
+   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); 
+   // Create an <iframe> and YouTube player 
+   var player; 
+   function onYouTubePlayerAPIReady(){ 
+    player = new YT.Player('player', 
+    { 
+     height: '640', 
+     width: '360', 
+     videoId: 'h0LCrik_BGE', 
+     playerVars: {'autoplay': 0, 'controls': 0,'autohide': 1, 'wmode': 'opaque', 
+      'fs': 1, 'modestbranding': 1, 'showinfo': 0}, 
+     events: { onStateChange: function (event) 
+       { 
+        if(event.data == YT.PlayerState.ENDED) 
+        { 
+         $('#player').fadeOut("fast", function() {}); 
+         $('#intro_video_container').fadeOut("fast", function() {}); 
+        } 
+       } 
+      } 
+    }); 
+	
+    document.getElementById('close').onclick = function() 
+    { 
+     player.pauseVideo(); 
+     $('#player').fadeOut("fast", function() {}); 
+     $('#intro_video_container').fadeOut("fast", function() {}); 
+    }; 
+	
+   } 
+  
+  </script>
+            <div style="background:black;z-index:5;top:0px;left:0px; opacity:0.9; width:100%; height:100%" id="intro_video_container">
+            <div style="z-index: 10; width: 100%; height: 100%;" id="player"> </div>
+            <div style="position: absolute; top: 0px; right: 0px; z-index: 15; color: #FFFFFF; padding: 10px; margin: 0px; text-shadow: 1px 1px 1px #FFFFFF;"></div>
+          </div>
+            
+         
+
