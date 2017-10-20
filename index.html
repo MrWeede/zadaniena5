@@ -17,22 +17,14 @@
   <script type="text/javascript" charset="utf-8">
   $(function() {
 
-    /* For jquery.chained.js */
+   
     $("#przedmiot").chained("#klasa");
     $("#ksiazka").chained("#przedmiot");
     $("#temat").chained("#ksiazka");
 	
     $("#button").chained("#temat");
 
-    /* Show button after each pulldown has a value. */
-   /* $("#temat").bind("change", function(event) {
-        if ("" != $("option:selected", this).val() && "" != $("option:selected", $("#ksiazka")).val()) {
-            $("#button").fadeIn();
-        } else {
-            $("#button").hide();
-        }
-    });*/
-	
+  
 	$(document).ready(function(){
     $("select").change(function(){
         $(this).find("option:selected").each(function(){
@@ -40,6 +32,7 @@
             if(optionValue){
                 $(".box").not("." + optionValue).hide();
                 $("." + optionValue).show();
+				
             } else{
                 $(".box").hide();
             }
@@ -64,26 +57,6 @@
 <!-- Page Wrapper -->
 <div id="page-wrapper"> 
     
-    <!-- Header --> 
-    <!-- <header id="header" class="alt">
-    <h1><a href="index.html">Zadaniena5.pl</a></h1>
-  <nav> <a href="#menu">Menu</a> </nav> 
-  </header> --> 
-    
-    <!-- Menu --> 
-    <!--<nav id="menu">
-    <div class="inner">
-      <h2>Menu</h2>
-      <ul class="links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="generic.html">Generic</a></li>
-        <li><a href="elements.html">Elements</a></li>
-        <li><a href="#">Log In</a></li>
-        <li><a href="#">Sign Up</a></li>
-      </ul>
-      <a href="#" class="close">Close</a> </div>
-  </nav>--> 
-    
     <!-- Banner -->
     <section id="banner">
     <div class="inner"> <a style="display:block;" href="index.html">
@@ -91,10 +64,7 @@
       <h2>ZadanieNa5.pl<br>
         <span class="small_title">Znajdź swoje zadanie domowe!</span></h2>
       </a> 
-        <!--  
-      <div class="item type1 date1" > type 1 </div>
-      <div class="item type2 date2 color1" > type 2 </div>
-      <div class="item type1 date2" > type 1 </div>--> 
+      
       </div>
   </section>
     <!-- Wrapper -->
